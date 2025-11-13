@@ -23,3 +23,6 @@ select \* from clientes;
 Atualizando dados
 
 update clientes set nome = 'João silva matos' where id = 1;
+
+Alterando colunas
+alter table clientes add column sobre varchar(100);
