@@ -1,39 +1,20 @@
-#Comandos sql
-criando um banco de dados
+# 💾 Comandos SQL Essenciais
 
-create database empresa;
+Este README serve como uma referência rápida e prática dos comandos SQL mais comuns para a **criação, manipulação e gerenciamento de dados** em um banco de dados.
 
-Selecionando o banco de dados
-Use empresa;
+---
 
-Criando uma tabela
+## 🏗️ 1. Criação e Gerenciamento do Banco de Dados
 
-create table clientes(
-id int primary key,
-nome varchar(200),
-email varchar(100)
-);
+| Ação                                 | Comando SQL                      |
+| :----------------------------------- | :------------------------------- |
+| **Criar um novo banco de dados**     | `CREATE DATABASE nome_do_banco;` |
+| **Selecionar/Usar o banco de dados** | `USE nome_do_banco;`             |
+| **Apagar o banco de dados**          | `DROP DATABASE nome_do_banco;`   |
 
-Inserindo valores
-insert into clientes (id, nome, email) values(1, 'Maria silveira santos', 'Mariasilveria@gmail.com');
+### Exemplo de Criação
 
-Selecionando todos os clientes
-select \* from clientes;
-
-Atualizando dados
-
-update clientes set nome = 'João silva matos' where id = 1;
-
-Alterando colunas
-alter table clientes add column sobre varchar(100);
-
-Apaga todos os dados da tabela inclusive os id
-
-truncate table clientes;
-
-Apaga a tabela clientes
-drop table clientes;
-
-Apaga o banco de dados
-
-drop database empresa;
+```sql
+CREATE DATABASE empresa;
+USE empresa;
+```
