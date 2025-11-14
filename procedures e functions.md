@@ -12,3 +12,17 @@ DELIMITER ;
 
 call inserir_cliente('Pamela Silva Barros', 'Pamela@gmail.com');
 select \* from clientes;
+
+DELIMITER //
+
+CREATE FUNCTION calcularIVA (
+valor DECIMAL(10, 2)
+)
+RETURNS DECIMAL (10, 2)
+DETERMINISTIC
+BEGIN
+--
+RETURN valor \* 0.15;
+END //
+
+DELIMITER ;
